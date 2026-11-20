@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SDK ATAGAMU — Sistem Absensi Guru</title>
+  <link rel="stylesheet" href="css/absen.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body class="halaman-absen halaman-depan">
+
+  <header class="header-profesional">
+    <div class="identitas-header">
+      <div class="bingkai-logo-sekolah">
+        <img class="logo-sekolah" src="assets/logo-sekolah.png" alt="" />
+      </div>
+      <div class="teks-header">
+        <span class="judul-header-utama">SDK ATAGAMU</span>
+        <span class="subjudul-header">Sistem Absensi QR Guru</span>
+      </div>
+    </div>
+
+    <nav class="nav-header-kanan" aria-label="Navigasi Utama">
+      <a
+        class="btn-header-admin"
+        href="admin/LoginAdmin.html"
+        data-cek-jaringan="true"
+        data-label-tujuan="halaman Login Admin"
+      >Login Admin</a>
+    </nav>
+  </header>
+
+  <main class="area-tengah-depan">
+    <div class="kartu-tombol-utama">
+      <a
+        class="btn-absen-sekarang"
+        href="absen/Absengurusdkatagamu.html"
+        data-cek-jaringan="true"
+        data-label-tujuan="halaman Absen Guru"
+      >
+        Absen sekarang
+      </a>
+    </div>
+  </main>
+
+  <!-- Overlay Loading Saat Mengecek Jaringan -->
+  <div id="overlayLoadingJaringan" class="overlay-jaringan tersembunyi" role="status" aria-live="polite">
+    <div class="kotak-jaringan">
+      <div class="spinner-jaringan" aria-hidden="true"></div>
+      <p id="teksLoadingJaringan" class="judul-popup-jaringan">Memeriksa koneksi jaringan...</p>
+      <p id="detailLoadingJaringan" class="deskripsi-popup-jaringan">
+        Menghubungkan ke halaman tujuan, mohon tunggu sebentar.
+      </p>
+      <button id="btnBatalLoading" type="button" class="btn-sekunder-jaringan">Batal</button>
+    </div>
+  </div>
+
+  <!-- Pop-up Kesalahan Jaringan -->
+  <div id="popupKesalahanJaringan" class="overlay-jaringan tersembunyi" role="dialog" aria-modal="true" aria-labelledby="judulErrorJaringan">
+    <div class="kotak-jaringan popup-error">
+      <div class="ikon-error-jaringan" aria-hidden="true">!</div>
+      <h2 id="judulErrorJaringan" class="judul-popup-jaringan">Koneksi Jaringan Bermasalah</h2>
+      <p id="deskripsiErrorJaringan" class="deskripsi-popup-jaringan">
+        Jaringan terputus atau terlalu lambat sehingga halaman belum dapat dimuat.
+      </p>
+      <div class="aksi-popup-jaringan">
+        <button id="btnTutupPopupJaringan" type="button" class="btn-sekunder-jaringan">Tutup</button>
+        <button id="btnCobaLagiJaringan" type="button" class="btn-utama-jaringan">Coba Lagi</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/navigasi-jaringan.js"></script>
+</body>
+</html>
